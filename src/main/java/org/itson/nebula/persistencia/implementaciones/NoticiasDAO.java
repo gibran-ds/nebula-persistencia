@@ -12,6 +12,11 @@ public class NoticiasDAO implements INoticiasDAO {
     
     private static final Logger LOGGER = Logger.getLogger(NoticiasDAO.class.getName());
 
+    /**
+     * Constructor por defecto protegido para evitar que se accede fuera sin utilizar la facha de persitencia
+     */
+    protected NoticiasDAO(){}
+    
     @Override
     public List<Noticia> consultar() throws PersistenciaException {
         try{           

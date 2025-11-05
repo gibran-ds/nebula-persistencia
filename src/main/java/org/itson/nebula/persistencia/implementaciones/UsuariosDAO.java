@@ -13,6 +13,11 @@ public class UsuariosDAO implements IUsuariosDAO {
 
     private static final Logger LOGGER = Logger.getLogger(UsuariosDAO.class.getName());
     
+    /**
+     * Constructor por defecto protegido para evitar que se accede fuera sin utilizar la facha de persitencia
+     */
+    protected UsuariosDAO(){}
+    
     @Override
     public Usuario registrar(NuevoUsuarioDTO nuevoUsuario) throws PersistenciaException {
         try{
