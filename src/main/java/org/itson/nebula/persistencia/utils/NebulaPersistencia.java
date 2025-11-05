@@ -9,12 +9,10 @@ import java.security.spec.InvalidKeySpecException;
 
 public class NebulaPersistencia {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws InvalidKeySpecException, NoSuchAlgorithmException {
+        // generacion de passwords hashed que pueden resetearse en la BD en caso de perderlos
         for (int i = 1; i <= 6; i++) {
-            String hashedPassword = ManejadorPasswords.hashPassword("654321");
+            String hashedPassword = ManejadorPasswords.hashPassword("123456");
             System.out.println(hashedPassword);
         }
     }
